@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+  class kind {
+    nameKind;
+    featherColor;
+    constructor(nameKindInput, featherColorInput) {
+      this.nameKind = nameKindInput;
+      this.featherColor = featherColorInput;
+    }
+    getNameKind() {
+      return this.nameKind;
+    }
+    getFeatherColor() {
+      return this.featherColor;
+    }
+    setNameKind(nameKindInput){
+      this.nameKinInput;
+    }
+    setFeatherColor(featherColorInput) {
+      this.featherColorInput;
+    }
+    getInfo() {
+      return this.nameKind + "-" + this.featherColor;
+    }
+  }
+  // function main() {
+  //   let dog1 = new kind('beagle', 'đen')
+  //   let dog2 = new kind('alaska', 'xám')
+  //   console.log(dog1.getInfo())
+  //   console.log(dog2.getInfo())
+  // }
+  // main()
+  class dog {
+    nameDog;
+    age;
+    kinDog;
+    isSick;
+    constructor(nameDogInput, ageInput, kinDogInput, isSickInput) {
+      this.nameDog = nameDogInput;
+      this.age = ageInput;
+      this.kinDog = kinDogInput;
+      this.isSick = isSickInput;
+    }
+    getNameDog() {
+      return this.nameDog;
+    }
+    getAge() {
+      return this.age;
+    }
+    getKinDog() {
+      return this.kinDog;
+    }
+    setNameDog(nameDogInput) {
+      this.nameDogInput;
+    }
+    setAge(ageInput) {
+      this.ageInput;
+    }
+    setSkinDog(skinDogInput) {
+      this.kinDogInput;
+    }
+    getInfo () {
+      return this.nameDog + '-' + this.age + '-' + this.kinDog;
+    }
+
+    checkSick(){
+        if (this.isSick) {
+            console.log('dang bi om')
+        } else {
+            console.log('khoe')
+        }
+    }
+  }
+  function main() {
+      let kind1 = new kind('hunky', 'den')
+    let dogs1 = new dog('cho1', 10, kind1,true)
+      dogs1.checkSick()
+    let dogs2 = new dog('cho2', 9, kind1, false)
+      dogs2.checkSick()
+    let dogs3 = new dog('cho3', 8, 'phốc', false)
+      dogs3.checkSick()
+    // console.log(dogs1.getInfo())
+    // console.log(dogs2.getInfo())
+    // console.log(dogs3.getInfo())
+
+  }
+  main()
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class product {
+    id;
+    name;
+    quantify;
+    price;
+    constructor(idInput, nameInput, quantifyInput, priceInput) {
+      this.id = idInput;
+      this.name = nameInput;
+      this.quantify = quantifyInput;
+      this.price = priceInput;
+    }
+    getId(){
+      return this.id
+    }
+    getName(){
+      return this.name
+    }
+    getQuantify(){
+      return this.quantify
+    }
+    getPrice(){
+      return this.price
+    }
+    setId(idInput){
+      this.id = idInput
+    }
+    setName(nameInput){
+      this.name = nameInput
+    }
+    setQuantify(quantifiInput){
+      this.quantify = quantifiInput
+    }
+    setPrice(priceInput) {
+      this.price = priceInput
+    }
+  }
+  class store {
+    listProducts;
+    name;
+    constructor(nameInput) {
+      this.listProducts = [];
+      this.name = nameInput;
+    }
+    add(newProduct){
+      this.listProducts.push(newProduct)
+    }
+    fillAll(){
+      return this.listProducts
+    }
+    remove(index) {
+      this.listProducts.splice(index, 1)
+    }
+    edit(index, newProduct){
+      this.listProducts[index] = newProduct;
+    }
+  }
+  function main(){
+    let products = new store("thực phẩm");
+    let tp1 = new product(1, 'banh mi', 20, 500.000)
+    products.add(tp1);
+    let tp2 = new product(2, 'bánh bao', 10, 200.000)
+    products.add(tp2)
+    // products.remove(1)
+    let tp3 = new product(3, 'bánh dán', 5, 50.000)
+    products.edit(1, tp3)
+    let producttp = products.fillAll()
+    for (let i = 0; i < producttp.length; i++) {
+      console.log(producttp[i].name)
+    }
+  }
+  main()
+</script>
+</body>
+</html>
